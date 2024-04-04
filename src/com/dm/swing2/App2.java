@@ -1,6 +1,5 @@
 package com.dm.swing2;
 
-import javax.swing.JFrame;
 import javax.swing.SwingUtilities;
 
 public class App2
