@@ -23,7 +23,7 @@ public class MainFrame3 extends JFrame {
 		setLayout(new BorderLayout());
 		
 		textArea = new JTextArea();
-		btn = new JButton("Clieck Me!");
+		btn = new JButton("Click Me!");
 		
 		btn.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {

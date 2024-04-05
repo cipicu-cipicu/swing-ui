@@ -1,29 +1,36 @@
-package com.dm.swing2;
+package com.dm.swing4;
 
 import java.awt.BorderLayout;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 
 import javax.swing.JButton;
 import javax.swing.JFrame;
-import javax.swing.JTextArea;
 
 // see: https://docs.oracle.com/javase/tutorial/uiswing/layout/visual.html
 
-public class MainFrame2 extends JFrame {
+public class MainFrame4 extends JFrame {
 	
 	private static final long serialVersionUID = 1L;
 	
-	private JTextArea textArea;
+	private TextPanel4 textPanel;
 	private JButton btn;
 	
-	public MainFrame2() {
+	public MainFrame4() {
 		super("Hello World");
 		
 		setLayout(new BorderLayout());
 		
-		textArea = new JTextArea();
 		btn = new JButton("Click Me!");
+		textPanel = new TextPanel4();
 		
-		add(textArea, BorderLayout.CENTER);
+		btn.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				textPanel.appendText("Hello\n");
+			}
+		});
+		
+		add(textPanel, BorderLayout.CENTER);
 		add(btn, BorderLayout.SOUTH);
 		
 		setSize(600, 500);
